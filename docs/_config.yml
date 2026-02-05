@@ -1,0 +1,10 @@
+theme: jekyll-theme-minimal
+title: RustFrame
+description: Privacy-focused, cross-platform screen region sharing tool
+show_downloads: true
+google_analytics: 
+exclude:
+  - technical/
+  - developer/
+  - profiles/
+  - user-guide/

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RustFrame - Privacy-Focused Screen Region Sharing</title>
+    <meta name="description" content="RustFrame is a cross-platform screen region sharing tool for video conferencing. Share only what you want with pixel-perfect control.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🦀 RustFrame</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#quickstart">Quick Start</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#documentation">Docs</a></li>
+                <li><a href="https://github.com/salihcantekin/RustFrame/releases" class="btn-download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Share Your Screen<br><span class="highlight">The Way You Want</span></h1>
+                <p class="hero-subtitle">Privacy-focused, cross-platform screen region sharing for video conferencing</p>
+                <div class="hero-buttons">
+                    <a href="https://github.com/salihcantekin/RustFrame/releases/latest" class="btn btn-primary">Download Latest</a>
+                    <a href="#quickstart" class="btn btn-secondary">Get Started</a>
+                </div>
+                <div class="hero-badges">
+                    <img src="https://img.shields.io/github/actions/workflow/status/salihcantekin/RustFrame/build-windows.yml?branch=master&label=Windows%20Build&logo=windows&style=flat-square" alt="Windows Build">
+                    <img src="https://img.shields.io/github/actions/workflow/status/salihcantekin/RustFrame/build-macos.yml?branch=master&label=macOS%20Build&logo=apple&style=flat-square" alt="macOS Build">
+                    <img src="https://img.shields.io/github/downloads/salihcantekin/RustFrame/total?label=Downloads&style=flat-square" alt="Downloads">
+                    <img src="https://img.shields.io/badge/license-MIT-blue?label=License&style=flat-square" alt="License">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-what">
+        <div class="container">
+            <h2 class="section-title">What is RustFrame?</h2>
+            <p class="section-intro">RustFrame lets you share a specific part of your screen instead of your entire desktop. Perfect for ultra-wide monitors, multi-monitor setups, and keeping your private information private during video calls.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Pixel-Perfect Control</h3>
+                    <p>Select exactly what you want to share with a draggable, resizable border</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>No account, no cloud, no telemetry. Everything runs locally on your machine</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>High Performance</h3>
+                    <p>GPU-accelerated capture with minimal CPU usage. Smooth and responsive</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Multi-Monitor</h3>
+                    <p>Seamlessly works across multiple displays and ultra-wide screens</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Customizable</h3>
+                    <p>Adjust borders, highlights, cursor, FPS, and more to fit your workflow</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Cross-Platform</h3>
+                    <p>Works on Windows, macOS, and Linux (experimental)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section section-features">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            
+            <div class="feature-showcase">
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h3>🎬 Region Selection & Preview</h3>
+                        <ul>
+                            <li>Hollow border window for pixel-perfect region selection</li>
+                            <li>Click-through capture mode - interact with apps underneath</li>
+                            <li>Preview window displays captured region in real-time</li>
+                            <li>Move and resize region while capturing</li>
+                            <li>Remember last region on startup</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h3>🎮 Interaction Features</h3>
+                        <ul>
+                            <li><strong>Cursor Control:</strong> Show/hide your cursor in the capture</li>
+                            <li><strong>Click Highlights:</strong> Visual feedback with customizable colors</li>
+                            <li><strong>Recording Indicator:</strong> "REC" badge shows when capturing</li>
+                            <li><strong>Live Adjustment:</strong> No restart needed to change region</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h3>🎯 Content Filtering</h3>
+                        <ul>
+                            <li><strong>Capture All:</strong> Capture everything in the region</li>
+                            <li><strong>Exclude Mode:</strong> Hide selected windows/apps from capture</li>
+                            <li><strong>Include Only:</strong> Capture only selected windows (coming soon)</li>
+                            <li><strong>Auto-Exclude:</strong> Preview window automatically excluded</li>
+                            <li>Manual refresh - no background polling for privacy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-text">
+                        <h3>⚙️ Customization</h3>
+                        <ul>
+                            <li><strong>Border Styling:</strong> Adjustable width, color, visibility</li>
+                            <li><strong>Performance Tuning:</strong> FPS control (15-144 FPS)</li>
+                            <li><strong>Capture Profiles:</strong> Pre-configured for Discord, Meet, Teams, etc.</li>
+                            <li><strong>Multi-language:</strong> English built-in, more available for download</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quickstart" class="section section-quickstart">
+        <div class="container">
+            <h2 class="section-title">Quick Start</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Launch RustFrame</h3>
+                        <p>Open the application on your computer</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Enable Preview Border</h3>
+                        <p>Click Settings → Region tab → Enable Preview Border</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Select Your Region</h3>
+                        <p>Drag and resize the border to cover the area you want to share</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Capture</h3>
+                        <p>Click "Start Capture" button</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Share in Video Call</h3>
+                        <p>In your video app, share the "RustFrame - Share This Window" window</p>
+                    </div>
+                </div>
+            </div>
+            <p class="note"><strong>Note:</strong> You can move and resize the border during capture. The preview window is what you share, not the border window.</p>
+        </div>
+    </section>
+
+    <section id="platforms" class="section section-platforms">
+        <div class="container">
+            <h2 class="section-title">Platform Support</h2>
+            
+            <div class="platforms-table">
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <h3>🪟 Windows 10/11</h3>
+                        <span class="badge badge-success">✅ Stable</span>
+                    </div>
+                    <div class="platform-details">
+                        <p><strong>Capture Method:</strong> Windows Graphics Capture (WGC)</p>
+                        <p><strong>Rendering:</strong> DirectX 11 (GPU)</p>
+                        <p><strong>Performance:</strong> ~8-10% CPU</p>
+                        <p><strong>Fallback:</strong> GDI (CPU)</p>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <h3>🍎 macOS 12.3+</h3>
+                        <span class="badge badge-success">✅ Stable</span>
+                    </div>
+                    <div class="platform-details">
+                        <p><strong>Capture Method:</strong> ScreenCaptureKit</p>
+                        <p><strong>Rendering:</strong> Metal (GPU)</p>
+                        <p><strong>Performance:</strong> ~5-8% CPU</p>
+                        <p><strong>Requirements:</strong> Screen Recording + Accessibility permissions</p>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <h3>🍎 macOS 10.15-12.2</h3>
+                        <span class="badge badge-warning">✅ Supported</span>
+                    </div>
+                    <div class="platform-details">
+                        <p><strong>Capture Method:</strong> CoreGraphics</p>
+                        <p><strong>Rendering:</strong> CPU fallback</p>
+                        <p><strong>Performance:</strong> ~10-15% CPU</p>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <h3>🐧 Linux</h3>
+                        <span class="badge badge-experimental">🚧 Experimental</span>
+                    </div>
+                    <div class="platform-details">
+                        <p><strong>Capture Method:</strong> X11/Wayland</p>
+                        <p><strong>Rendering:</strong> wgpu</p>
+                        <p><strong>Performance:</strong> Varies</p>
+                        <p><strong>Status:</strong> In development</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Compatible With</h3>
+            <div class="apps-grid">
+                <div class="app-badge">Discord</div>
+                <div class="app-badge">Google Meet</div>
+                <div class="app-badge">Zoom</div>
+                <div class="app-badge">Microsoft Teams</div>
+                <div class="app-badge">OBS Studio</div>
+                <div class="app-badge">Slack</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentation" class="section section-docs">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3>📖 User Guide</h3>
+                    <p>Installation, usage, and troubleshooting</p>
+                    <ul class="doc-links">
+                        <li><a href="user-guide/README.md">Overview</a></li>
+                        <li><a href="user-guide/quick-start.md">Quick Start</a></li>
+                        <li><a href="user-guide/features.md">Features</a></li>
+                        <li><a href="user-guide/settings.md">Settings</a></li>
+                        <li><a href="user-guide/troubleshooting.md">Troubleshooting</a></li>
+                        <li><a href="user-guide/faq.md">FAQ</a></li>
+                        <li><a href="user-guide/macos-permissions.md">macOS Permissions</a></li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>👨‍💻 Developer Guide</h3>
+                    <p>Architecture, building, and contributing</p>
+                    <ul class="doc-links">
+                        <li><a href="developer/README.md">Overview</a></li>
+                        <li><a href="developer/building.md">Building from Source</a></li>
+                        <li><a href="developer/known-issues.md">Known Issues</a></li>
+                        <li><a href="../CONTRIBUTING.md">Contributing</a></li>
+                        <li><a href="../CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>🔧 Technical Docs</h3>
+                    <p>Platform details and internals</p>
+                    <ul class="doc-links">
+                        <li><a href="technical/README.md">Overview</a></li>
+                        <li><a href="technical/gpu-optimization.md">GPU Optimization</a></li>
+                        <li><a href="technical/multi-monitor.md">Multi-Monitor</a></li>
+                        <li><a href="technical/color-formats.md">Color Formats</a></li>
+                        <li><a href="technical/WINDOWS_LIMITATIONS.md">Windows Limitations</a></li>
+                    </ul>
+                </div>
+
+                <div class="doc-card">
+                    <h3>⚙️ Profiles & Settings</h3>
+                    <p>Platform-specific configuration</p>
+                    <ul class="doc-links">
+                        <li><a href="profiles/README.md">Profiles Overview</a></li>
+                        <li><a href="profiles/windows.md">Windows Profiles</a></li>
+                        <li><a href="PERFORMANCE_OPTIMIZATION.md">Performance Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-demo">
+        <div class="container">
+            <h2 class="section-title">Video Walkthroughs</h2>
+            <div class="videos">
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=TZ4n9UYwnWg" target="_blank">
+                        <img src="https://img.youtube.com/vi/TZ4n9UYwnWg/hqdefault.jpg" alt="RustFrame Overview (English)">
+                        <div class="video-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                    <h4>English Overview</h4>
+                </div>
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=YJRu-6YHflw" target="_blank">
+                        <img src="https://img.youtube.com/vi/YJRu-6YHflw/hqdefault.jpg" alt="RustFrame Overview (Turkish)">
+                        <div class="video-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                    <h4>Turkish Overview (Türkçe)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Download RustFrame and start sharing your screen with confidence</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/salihcantekin/RustFrame/releases/latest" class="btn btn-primary btn-large">Download Latest Release</a>
+                <a href="https://github.com/salihcantekin/RustFrame" class="btn btn-secondary btn-large">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RustFrame</h4>
+                    <p>Privacy-focused screen region sharing</p>
+                    <p class="footer-tech">Built with ❤️ using Rust + Tauri + React</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/salihcantekin/RustFrame">GitHub Repository</a></li>
+                        <li><a href="https://github.com/salihcantekin/RustFrame/releases">Releases</a></li>
+                        <li><a href="https://github.com/salihcantekin/RustFrame/issues">Issues</a></li>
+                        <li><a href="https://github.com/salihcantekin/RustFrame/discussions">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="user-guide/README.md">User Guide</a></li>
+                        <li><a href="developer/README.md">Developer Guide</a></li>
+                        <li><a href="../CONTRIBUTING.md">Contributing</a></li>
+                        <li><a href="../LICENSE">License (MIT)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="../CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+                        <li><a href="../SECURITY.md">Security Policy</a></li>
+                        <li><a href="https://github.com/salihcantekin">By Salih Cantekin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RustFrame. Released under the MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
